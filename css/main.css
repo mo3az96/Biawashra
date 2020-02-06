@@ -346,6 +346,7 @@ html {
 }
 @media (max-width: 992px) {
   .nav-cont {
+    overflow-y: auto;
     display: none;
     position: fixed;
     top: 0;
