@@ -1,0 +1,93 @@
+.nav-foot-cont {
+    @include sm {
+        margin-bottom: 5px;
+        padding: 10px 0;
+    }
+}
+
+.mo-accordion {
+    cursor: pointer;
+    width: 100%;
+    @include transition(all 0.4s ease-in-out);
+
+    &:after {
+        content: "\e874";
+        font-family: 'Linearicons-Free';
+        font-size: 13px;
+        @include transition(all 0.4s ease-in-out);
+    }
+
+    &.active {
+
+        &:after {
+            transform: rotate(90deg);
+        }
+    }
+
+    &.nav-foot-header {
+        @include sm {
+            margin-bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+}
+
+.mo-panel {
+    &.nav-foot {
+        height: auto;
+        max-height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding: 0 15px;
+        @include transition(all 0.5s ease-in-out);
+        align-items: center;
+        text-align: center;
+    }
+}
+
+header {
+    .mo-accordion {
+        cursor: pointer;
+        width: 100%;
+        @include transition(all 0.4s ease-in-out);
+
+        &:after {
+            content: "\e874";
+            font-family: 'Linearicons-Free';
+            font-size: 8px;
+            @include transition(all 0.4s ease-in-out);
+        }
+
+        &.active {
+
+            &:after {
+                transform: rotate(90deg);
+            }
+        }
+
+        @include sm {
+            margin-bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    .mo-panel {
+        &.drop-ul {
+            height: auto;
+            max-height: 0;
+            overflow: hidden;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            padding: 0 15px;
+            @include transition(all 0.5s ease-in-out);
+            align-items: flex-start;
+            text-align: right;
+        }
+    }
+}

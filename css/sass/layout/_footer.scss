@@ -1,0 +1,191 @@
+footer {
+    background-color: $green;
+    padding-top: 56px;
+    margin-top: 92px;
+
+    @include sm {
+        padding-top: 36px;
+        margin-top: 72px;
+    }
+}
+
+.foot-header {
+    font-size: 18px;
+    font-family: med;
+    color: #fff;
+    margin-bottom: 30px;
+
+    @include sm {
+        text-align: center;
+    }
+}
+
+.nav-foot {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 105px;
+}
+
+.nav-foot-li {
+    margin-bottom: 5px;
+
+    &:nth-of-type(4n) {
+        margin-bottom: 0;
+    }
+}
+
+.nav-foot-link {
+    font-size: 16px;
+    color: $link;
+    font-family: light;
+    display: inline-flex;
+    backface-visibility: hidden;
+    @include transition(all 0.3s ease-in-out);
+
+    &:hover {
+        color: #fff;
+        transform: translateX(-8px);
+    }
+}
+
+.download-cont {
+    display: flex;
+    flex-direction: column;
+
+    @include sm {
+        margin-top: 15px;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.app-downlaod {
+    display: flex;
+    align-items: center;
+
+    @include xs {
+        width: 100%;
+        justify-content: space-around;
+    }
+}
+
+.download {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 38px;
+    margin-left: 5px;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background-image: -webkit-gradient(linear, left top, right top, from(transparent), to(rgba(255, 255, 255, 0.7)));
+        background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.7));
+        z-index: 1;
+        cursor: pointer;
+    }
+
+    &:hover {
+        &:after {
+            -webkit-animation: shape 0.7s linear;
+            animation: shape 0.7s linear;
+        }
+    }
+
+    &:last-of-type {
+        margin-left: 0;
+    }
+
+    @include xs {
+        margin-left: 0;
+    }
+}
+
+.follow {
+    display: flex;
+    align-items: center;
+    margin-top: 21px;
+
+    @include xs {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    margin-left: 23px;
+
+    @include xs {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(#fff, 0.102);
+    border-radius: 50%;
+    color: #fff;
+    font-size: 16px;
+    @include transition(all 0.3s ease-in-out);
+    margin-left: 5px;
+
+    &:last-of-type {
+        margin-left: 0;
+    }
+
+    &:hover {
+        color: $green;
+        background-color: #fff;
+    }
+}
+
+.maroof {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.copyright {
+    padding: 11px 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 52px;
+    border-top: 1px solid rgba(#fff, 0.149);
+    color: #fff;
+    font-size: 14px;
+
+    @include xs {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    img {
+        margin: 0 5px;
+    }
+
+    .tasawk {
+        @include xs {
+            margin: 5px 0 0;
+        }
+    }
+}
