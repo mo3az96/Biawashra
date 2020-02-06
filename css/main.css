@@ -140,6 +140,7 @@ html {
 }
 @media (max-width: 992px) {
   .search-cont {
+    height: 53px;
     width: 95%;
     margin: 120px auto;
     position: fixed;
@@ -335,7 +336,7 @@ html {
   display: none;
 }
 .nav-cont .close-btn {
-  display: flex;
+  display: none;
   position: absolute;
   font-size: 20px;
   color: #dcdcdc;
@@ -353,6 +354,9 @@ html {
     right: 0;
     background-color: rgba(83, 160, 69, 0.5);
     z-index: 99;
+  }
+  .nav-cont .close-btn {
+    display: flex;
   }
   .nav-cont .mo-navbar {
     width: 280px;
@@ -429,6 +433,7 @@ html {
     width: auto;
     border-bottom: none;
     margin: 0 0 5px;
+    display: block;
   }
   .nav-cont .drop-ul .drop-a {
     color: #333333;

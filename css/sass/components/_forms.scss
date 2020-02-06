@@ -28,6 +28,7 @@
     display: none;
 
     @include sm {
+        height: 53px;
         width: 95%;
         margin: 120px auto;
         position: fixed;
